@@ -202,7 +202,7 @@ console.log(reduceAncestors(ph,sharedDNA,0)/4);
 function countAncestors(person,test){
     function combine(person,fromMother,fromFather){
         var thisOneCounts = test(person);
-        return fromMother + fromFather + (thisOneCounts ? 1:0);
+        return fromMother + fromFather + (thisOneCounts?1:0);
     }
     return reduceAncestors(person,combine,0);
 }

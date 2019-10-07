@@ -10,3 +10,24 @@ grouping operation. It should accept as arguments an array and a
 function that computes the group for an element in the array and return
 an object that maps group names to arrays of group numbers.*/
 
+//Array of objects
+var ancestry = JSON.parse(require("F:/Folders/Programming/Eloquent Javascipt" +
+    "/Part 1/Higher-Order Functions/Data/ancestry.js"));
+
+//creates an object that references people in ancestry by their name
+var byName = {};
+ancestry.forEach(function(person){
+    byName[person.name] = person;
+});
+
+//function to group persons by century
+function groupCompute(person){
+    return Math.cell(person.died/100);
+}
+
+//return an object that maps group names to arrays of group numbers
+function groupBy(array,groupCompute){
+    return array.reduce(function(accumulator,currentValue){
+        
+    },[]);
+}

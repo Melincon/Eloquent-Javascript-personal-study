@@ -132,7 +132,7 @@ console.log("R",2,"D",2);
     //Closure
 
 function wrapvalue(n){
-    var lovalVariable = n;
+    var localVariable = n;
     return function() {return localVariable;};
 }
 
@@ -205,7 +205,7 @@ printFarmInventory(7,11,13);
 
 function zeroPad(number, width){
     var string = String(number);
-    while (string.length < witdth)
+    while (string.length < width)
         string = "0" + string;
     return string;
 }
